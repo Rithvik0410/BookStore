@@ -16,8 +16,17 @@
         p {
             color: black;
             font-family: 'Times New Roman', Times, serif;
-            font-weight: bold;
             font-size: 20px;
+        }
+        button{
+            background-color: #0f2fe7;
+            color: white;
+            padding:3px;
+            border: none;
+            margin-top: 4px;
+            cursor: pointer;
+            width: 100%;
+            border-radius:3px;
         }
     </style>
 </head>
@@ -52,7 +61,7 @@
                         <a class="nav-link active" href="#">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Contact</a>
+                        <button class="button" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -94,15 +103,26 @@
         </button>
     </div>
     <br>
+    <div class="col-md-12">
+        <div class="d-flex justify-content-end mb-3">
+          <select class="custom-select w-auto">
+            <option selected>Sort by</option>
+            <option value="1">Relevance</option>
+            <option value="2">Price (Low to High)</option>
+            <option value="3">Price (High to Low)</option>
+            <option value="4">Publication Date</option>
+          </select>
+        </div>
+        <br>
     <div class="container">
         <div class="row">
             <div class="col-md-3 mb-4">
                 <div class="card" style="width: 18rem;">
                     <img src="images/book1.png" class="card-img-top" alt="book1">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">No Brainer</h5>
+                        <p class="card-text">It's up to Greg to save his crumbling school before it's shuttered for good. Up until now, middle school hasn't exactly been a joyride for Greg Heffley.</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
                     </div>
                 </div>
             </div>
@@ -110,9 +130,10 @@
                 <div class="card" style="width: 18rem;">
                     <img src="images/book2.png" class="card-img-top" alt="book2">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Cheesy Edition</h5>
+                        <p class="card-text">Relive your favorite moments from the book that started it all! Thanks to the new new desig, you’ll never look at Greg, Rowley, Manny, Rodrick the same way again.
+                        </p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
                     </div>
                 </div>
             </div>
@@ -120,9 +141,9 @@
                 <div class="card" style="width: 18rem;">
                     <img src="images/book3.png" class="card-img-top" alt="book3">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Rodrick Rules</h5>
+                        <p class="card-text">Greg enters the new school year, he's eager to put the past three months behind him and one event in particular. But Rodrick, knows all about the incident of Greg</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
                     </div>
                 </div>
             </div>
@@ -130,14 +151,44 @@
                 <div class="card" style="width: 18rem;">
                     <img src="images/book4.png" class="card-img-top" alt="book4">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">The Long Haul</h5>
+                        <p class="card-text">Gas station bathrooms, crazed seagulls and a runaway pig—not exactly Greg Heffley’s idea of a good time. But even the worst road trip can turn into an adventure.</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputname" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="exampleInputname" aria-describedby="nameHelp">
+                    <br>
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <label for="exampleInputnum" class="form-label">Mobile No.</label>
+                      <input type="number" class="form-control" id="exampleInputnum" aria-describedby="emailHelp">
+                      <br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
 </body>
   <div class="container">
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
@@ -145,9 +196,9 @@
         <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
           <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
         </a>
-        <p class="text-body-secondary">© 2024</p>
+        <p class="text-body-secondary">BookMart© 2024</p>
       </div>
-  
+
       <div class="col mb-3">
   
       </div>
